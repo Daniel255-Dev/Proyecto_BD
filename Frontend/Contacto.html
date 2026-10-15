@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda - Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="contenedor nav-contenido">
+            <a class="logo" href="index.html"><strong>Mi Tienda</strong></a>
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#productos">Productos</a>
+                <a href="Contacto.html">Contáctanos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="tarjeta contacto-seccion" id="contacto" aria-labelledby="TituloContacto">
+            <h2 id="TituloContacto">Contacto</h2>
+            <form id="formularioContacto" class="form-contacto">
+                <div class="campo">
+                    <label for="nombreCompleto">Nombre Completo</label>
+                    <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Ej: Ana López" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correoContacto">Correo</label>
+                    <input type="email" id="correoContacto" name="correoContacto" placeholder="Ej: ana@correo.com"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="asuntoContacto">Asunto</label>
+                    <input type="text" id="asuntoContacto" name="asuntoContacto"
+                        placeholder="Ej: Consulta sobre un producto" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensajeContacto">Mensaje</label>
+                    <textarea id="mensajeContacto" name="mensajeContacto" rows="5" placeholder="Escribe tu mensaje..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-contacto">Enviar mensaje</button>
+                <p id="estadoContacto" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="tarjeta contacto-seccion seccion-mensajes" aria-labelledby="TituloMensajes">
+            <h2 id="TituloMensajes">Administrar mensajes enviados</h2>
+            <p class="ayuda-mensajes">Ingresa la contraseña de administrador para consultar y eliminar mensajes.</p>
+            <form id="formularioAdministrador" class="form-contacto">
+                <div class="campo">
+                    <label for="contrasenaAdministrador">Contraseña de administrador</label>
+                    <input type="password" id="contrasenaAdministrador" name="contrasenaAdministrador"
+                        autocomplete="current-password" required>
+                </div>
+                <div class="acciones-mensajes">
+                    <button type="submit" id="btnAccesoAdministrador" class="btn btn-contacto">
+                        Ver mensajes
+                    </button>
+                    <button type="button" id="btnCerrarSesion" class="btn btn-salir" hidden>
+                        Cerrar sesión
+                    </button>
+                </div>
+                <p id="estadoAdministrador" role="status" aria-live="polite"></p>
+            </form>
+            <div id="listaMensajesContacto" class="lista-mensajes" aria-live="polite" hidden></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor footer-contenido">
+            <p>&copy; 2026 Mi Tienda - Proyecto Formativo con Node.js, Express y MYSQL.</p>
+        </div>
+    </footer>
+
+    <script src="contacto.js"></script>
+</body>
+
+</html>

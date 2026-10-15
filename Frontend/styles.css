@@ -1,0 +1,382 @@
+/* =========================================================
+   estilos.css — Estilos para Mi Tienda
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Barra de Navegación (Navbar) --- */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #1e293b;
+}
+
+.logo strong {
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* --- Contenido Principal --- */
+main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.encabezado-principal {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.encabezado-principal h1 {
+    font-size: 2rem;
+    color: #0f172a;
+}
+
+.encabezado-principal p {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+/* --- Layout del Panel (Formulario + Lista) --- */
+.panel-tienda {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 25px;
+    align-items: start;
+    margin-bottom: 35px;
+}
+
+/* Tarjeta contenedora blanca */
+.tarjeta {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta h2 {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+/* --- Formulario --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+input,
+textarea {
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Botones */
+.btn {
+    padding: 12px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.acciones-form {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-guardar {
+    flex: 1;
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-guardar:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-cancelar {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+.btn-cancelar:hover {
+    background-color: #cbd5e1;
+}
+
+.btn-contacto {
+    background-color: #0f172a;
+    color: #ffffff;
+    align-self: flex-start;
+    padding: 10px 24px;
+}
+
+.btn-contacto:hover {
+    background-color: #334155;
+}
+
+.contacto-seccion {
+    max-width: 760px;
+    margin: 0 auto 35px;
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ayuda-mensajes {
+    color: #64748b;
+    margin: -6px 0 16px;
+}
+
+.acciones-mensajes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-salir {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+.btn-salir:hover {
+    background-color: #cbd5e1;
+}
+
+.lista-mensajes {
+    display: grid;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.mensaje-contacto {
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: #f8fafc;
+}
+
+.mensaje-contacto h3 {
+    color: #0f172a;
+    font-size: 1rem;
+}
+
+.remitente-mensaje {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin: 4px 0 10px;
+}
+
+.contenido-mensaje {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin-bottom: 14px;
+}
+
+.btn-eliminar-mensaje {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+.btn-eliminar-mensaje:hover {
+    background-color: #b91c1c;
+}
+
+/* --- Tarjetas de Producto --- */
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.producto {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.producto h3 {
+    font-size: 1.05rem;
+    color: #0f172a;
+}
+
+.producto p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.producto-precio {
+    font-weight: 700;
+    color: #2563eb;
+    font-size: 1.1rem !important;
+}
+
+.acciones {
+    display: flex;
+    gap: 8px;
+}
+
+.acciones button {
+    flex: 1;
+    padding: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-editar {
+    background-color: #e2e8f0;
+    color: #334155;
+}
+
+.btn-editar:hover {
+    background-color: #cbd5e1;
+}
+
+.btn-eliminar {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.btn-eliminar:hover {
+    background-color: #fca5a5;
+}
+
+/* --- Sección Contacto --- */
+.seccion-contacto {
+    margin-top: 10px;
+}
+
+.subtitulo-contacto {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.fila-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* --- Pie de Página (Footer) --- */
+.footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 20px 0;
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .panel-tienda {
+        grid-template-columns: 1fr;
+    }
+
+    .fila-contacto {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}

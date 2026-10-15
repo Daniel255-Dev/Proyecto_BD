@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda - Gestión de Productos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="contenedor nav-contenido">
+            <a class="logo" href="index.html"><strong>Mi Tienda</strong></a>
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="Contacto.html">Contáctanos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <div class="encabezado-principal">
+            <h1>Sistema de Gestión de Productos</h1>
+            <p>Panel conectado a Node.js, Express y MYSQL</p>
+        </div>
+
+        <div class="panel-tienda">
+            <section class="tarjeta" aria-labelledby="TituloFormulario">
+                <h2 id="TituloFormulario">Registrar Productos</h2>
+                <form id="formularioProducto">
+                    <input type="hidden" id="productoId" value="">
+
+                    <div class="campo">
+                        <label for="nombre">Nombre del producto:</label>
+                        <input type="text" id="nombre" placeholder="Ej: camiseta" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="precio">Precio ($)</label>
+                        <input type="number" id="precio" step="0.01" placeholder="Ej: 25000" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="Stock">Stock (Cantidad)</label>
+                        <input type="number" id="Stock" placeholder="Ej: 10" required>
+                    </div>
+
+                    <div class="acciones-form">
+                        <button type="submit" id="btn-guardar" class="btn btn-guardar">Guardar Producto</button>
+                        <button type="button" id="btn-Cancelar" class="btn btn-cancelar"
+                            style="display: none;">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="tarjeta" id="productos" aria-labelledby="TituloProductos">
+                <h2 id="TituloProductos">Lista de Productos</h2>
+                <div id="listaProductos" class="lista-productos"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor footer-contenido">
+            <p>&copy; 2026 Mi Tienda - Proyecto Formativo con Node.js, Express y MYSQL.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
