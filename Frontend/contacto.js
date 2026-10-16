@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://proyecto-bd-tzbv.onrender.com';
 const formularioContacto = document.getElementById('formularioContacto');
 const estadoContacto = document.getElementById('estadoContacto');
 const botonEnviar = formularioContacto.querySelector('button[type="submit"]');
