@@ -1,4 +1,4 @@
-requiere('dotenv').config();
+require('dotenv').config();
 const mysql = require('mysql2');
 
 const host = process.env.DB_HOST || 'localhost';
